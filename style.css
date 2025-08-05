@@ -1,0 +1,193 @@
+/* ======================
+  styles.css
+  Portfolio for Ishan (Mechatronics Engineer)
+  Edit content, colors, and layout as needed. Update image URLs for your own!
+====================== */
+
+/* RESET AND BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #0a0a1f;
+  color: #e0e0ff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+img { max-width: 100%; display: block; }
+.container { max-width: 1140px; margin: auto; padding: 0 20px; }
+
+/* HEADER & NAVIGATION */
+header {
+  background: #0a0a1f;
+  border-bottom: 2px solid #4d5bff;
+  position: sticky; top: 0; z-index: 1000;
+}
+nav {
+  display: flex; justify-content: space-between; align-items: center; padding: 20px 0;
+}
+.logo {
+  font-size: 2.2rem;
+  color: #7193ff;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 15px;
+}
+.logo .calligraphy {
+  font-family: 'Dancing Script', cursive;
+  color: #d0afff;
+  font-size: 2.6rem;
+  font-weight: normal;
+}
+nav ul.nav-links {
+  list-style: none; display: flex; gap: 2rem;
+}
+nav ul.nav-links li a {
+  color: #c0c6ff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: color .3s;
+}
+nav ul.nav-links li a:hover {
+  color: #4d5bff;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #181862, #10101a 85%);
+  padding: 90px 20px 70px;
+  text-align: center;
+  border-bottom: 2px solid #2323aa;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #aabbff;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.hero p {
+  color: #b0b4ff;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-weight: 400;
+}
+.hero .calligraphy-hero {
+  font-family: 'Dancing Script', cursive;
+  color: #d3aaff;
+  font-size: 2.2rem;
+}
+.hero .btn {
+  background: #4d5bff;
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer; border: none;
+  margin-top: 18px;
+  transition: background .3s;
+}
+.hero .btn:hover { background: #758bff; }
+.hero-img {
+  margin-top: 30px;
+  margin-bottom: -25px;
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-img img {
+  filter: drop-shadow(0 2px 18px #4d5bff77);
+}
+
+/* SECTION STYLING */
+.section {
+  padding: 60px 0;
+}
+.section h2,
+.section-title {
+  font-size: 2.3rem;
+  color: #97a4ff;
+  margin-bottom: 25px;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.text-center { text-align: center; }
+
+/* ABOUT */
+.about { background: #111132; color: #ccd1ff; }
+.about p {
+  max-width: 750px; margin: auto;
+  font-size: 1.08rem; line-height: 1.85;
+}
+
+/* PROJECTS */
+.projects { background: #0a0a1f; }
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.project {
+  background: #1a1a3d;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #2323aa44;
+  padding: 20px 23px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+.project:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 0 18px #758bff99;
+}
+.project h3 {
+  color: #93a7ff;
+  font-weight: 700;
+  margin-bottom: 13px;
+  font-size: 1.23rem;
+  display: flex; gap: 8px; align-items: center; justify-content: center;
+}
+.project .project-icon {
+  margin: 0 auto 12px auto;
+  width: 54px; /* You can change size here */
+  filter: drop-shadow(0 0 7px #53c6ea33);
+}
+.project p {
+  color: #bac2ff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* CONTACT */
+.contact { background: #111132; color: #bfc8ff; }
+.contact h2 { color: #a3aaff; gap: 10px; }
+.contact p { font-size: 1.05rem; margin-bottom: 12px; }
+.contact a {
+  color: #5d7eff;
+  font-weight: 600;
+  transition: color .3s;
+}
+.contact a:hover { color: #99abff; }
+
+/* FOOTER */
+footer {
+  background: #0a0a1f;
+  border-top: 1px solid #4d5bff;
+  color: #6674cc;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  nav ul.nav-links { flex-direction: column; gap: 1.2rem; }
+  .logo { font-size: 1.5rem; }
+  .logo .calligraphy { font-size: 1.7rem; }
+  .hero h1 { font-size: 2.1rem; }
+  .section h2, .section-title { font-size: 1.4rem; }
+  .project-list { grid-template-columns: 1fr; }
+  .hero-img { width: 75px; }
+}
+
+/* ===================
+  END styles.css
+=================== */
